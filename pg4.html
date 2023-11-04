@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Music Application</title>
+    <script type="text/javascript" src="jquery.js"></script>
+  <script>
+$(document).ready(function () {
+$("#Home").click(function (e) {
+  window.open("pg2.html", "_self");
+});
+
+$("#Profile").click(function (e) {
+  window.open("pg3.html", "_self");
+});
+
+$("#Switch").click(function (e) {
+  window.open("http://localhost:3000/", "_self");
+});
+
+$("#About").click(function (e) {
+  window.open("pg4.html", "_self");
+});
+});
+
+</script>
+   <style>
+
+    body {
+
+    font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #626262, #000000, #7d7e7d, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+ 
+  header {
+    color:#ffffff;
+    width: 100%;
+            text-align: center;
+            padding: 50px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+  
+  header img {
+    max-width: 100px;
+    vertical-align: middle;
+  }
+  
+  header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  header h4 {
+    background-color: #04ad18;
+    color: #000000;
+    padding: 10px;
+    
+  }  
+  nav {
+    background-color: #000000;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+ 
+#hero {
+    background-image: url('hero-background.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h2 {
+    font-size: 36px;
+}
+
+#hero p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+#features {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.feature {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+    max-width: 100%;
+}
+
+/* CTA button styles */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+header {
+            animation: fadeIn 2s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Add slide-in animation to the features section */
+        #features {
+            animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+footer {
+    
+    color: #ccff00;
+    text-align: center;
+    padding: 50px;
+  }
+
+   </style>
+</head>
+<body>
+    <header>
+        <nav>
+           
+            <ul>
+                <li id="Home">Home</li>
+                <li id="Profile">Profile</li>
+                <li id="Switch">Switch User</li>
+                <li id="About">About</li>
+            </ul>
+        </nav>
+        <div class="container">
+            
+            <h1 id="log">BEAT BLEND♪𝄞♫♬🎶</h1>
+            
+          </div>
+          </header>
+    </header>
+
+    <section id="hero">
+        <div class="hero-text">
+            <h2>Discover. Listen. Enjoy.</h2>
+            <p>Your one-stop destination for music.</p>
+            <a href="https://masstamilan.dev/" class="cta-button">Download Now</a>
+        </div>
+    </section>
+
+    <section id="features">
+        <h2>Features</h2>
+        <div class="feature">
+         
+            <h3>Large Music Library</h3>
+            <p>Access a vast library of songs from various genres.</p>
+        </div>
+        <div class="feature">
+            
+            <h3>Personalized Playlists</h3>
+            <p>Create and enjoy playlists tailored to your taste.</p>
+        </div>
+        <div class="feature">
+           
+            <h3>Offline Listening</h3>
+            <p>Download music for offline listening on the go.</p>
+        </div>
+    </section>
+ <footer>
+        <p>&copy; 2023 Music App. All rights reserved.</p>
+    </footer>
+</body>
+</html>

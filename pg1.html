@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src = "angular.js"></script>
+    <script>
+        var app = angular.module("myapp",[])
+        app.controller("mycon",function($scope){
+            $scope.submit = function(){
+                var email=$scope.email;
+              var pass=$scope.pass;
+              var pat=/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+              if (pat.test(email)) {
+            if (pass.length < 10) {
+                // Email is valid and password length is 10, proceed with your logic here
+                window.open("intro.html", "_self");
+            } else {
+                // Password length is not 10, handle the error
+                console.log("Password should be 10 characters");
+            }
+        } 
+        else {
+            // Email is not valid, handle the error
+            console.log("Email is not valid:", email);
+        }
+
+
+             
+
+            };
+        })
+    </script>
+
+    <style>
+     body {
+            font-family: Arial, sans-serif;
+           
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #626262, #c3c3c3, #7d7e7d, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+        header {
+            text-align: center;
+            padding: 50px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #content-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #login-container {
+            
+            padding: 70px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px #000000;
+            width: 300px;
+        }
+
+        #login-container h2 {
+            text-align: center;
+        }
+
+        #email,
+        #pass,
+        #bt {
+            margin: 10px 0;
+        }
+
+        #email label,
+        #pass label {
+            display: block;
+        }
+
+        #email input,
+        #pass input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+        }
+
+        #bt input[type="submit"] {
+            background-color: #007BFF;
+            padding: 10px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #bt input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        #signup-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #signup-link a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        #signup-link a:hover {
+            color: #0056b3;
+        }
+        #login-container {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Add a hover effect for the login button */
+        #bt input[type="submit"] {
+            background-color: #007BFF;
+            padding: 10px;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #bt input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Add a scaling effect on hover */
+        }
+        footer {
+    
+    color: #ccff00;
+    text-align: center;
+    width: 100%;
+    padding: 50px;
+  }
+
+    </style>
+</head>
+<body ng-app="myapp" ng-controller="mycon">
+    <header>
+        <div class="intro-text">
+            <h1>Welcome to</h1>
+            <h2>Your Music App</h2>
+        </div>
+        <div class="music-icon">
+            🎵
+        </div>
+    </header>
+    
+    <div id="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <div id="email">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email"ng-model="email" required>
+            </div>
+            <div id="pass">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="pass"ng-model="pass" required>
+            </div>
+            
+            <div id="bt" ng-click="submit()">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+        <p>Don't have an account?</p>
+        <div id="signup"><a href="http://localhost:3000/">
+            <p> Sign up</p>
+        </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 BEAT BLEND. All rights reserved.</p>
+    </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUSIC APPLICATION</title>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script>
+$(document).ready(function () {
+$("#Home").click(function (e) {
+  window.open("pg2.html", "_self");
+});
+
+$("#Profile").click(function (e) {
+  window.open("pg3.html", "_self");
+});
+
+$("#Switch").click(function (e) {
+  window.open("http://localhost:3000/", "_self");
+});
+
+$("#About").click(function (e) {
+  window.open("pg4.html", "_self");
+});
+
+});
+
+     </script>
+   
+  <style>
+    body {
+    
+    background-color: #3a3a3a;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(45deg, #626262, #000000, #7d7e7d, #000000);
+        background-size: 400% 400%;
+        animation: gradientAnimation 10s ease infinite;
+  }
+  @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+  
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    animation: headerFadeIn 1s;
+    color:#ffffff;
+    text-align: center;
+    padding: 10px 0;
+    
+  }
+  
+  
+  header img {
+    max-width: 100px;
+    vertical-align: middle;
+  }
+  
+  header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  } @keyframes headerFadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    
+
+    
+   
+
+   
+  
+  nav {
+    background-color: #000000;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: text-decoration 0.3s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+h2{
+  color: #ccff00;
+}
+
+section {
+    background-color: rgb(48, 48, 48);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log {
+    display: inline-block;
+    text-align: center;
+    margin: 4px;
+}
+.like-button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.log {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .log:hover {
+      transform: scale(1.05); /* Scale up on hover */
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a shadow on hover */
+    }
+.like-button:hover {
+    background-color: #2e86c1;
+      transform: scale(1.05);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Add any other styles you need for your audio rows */
+
+
+        
+footer {
+    
+    color: #ccff00;
+    text-align: center;
+    padding: 50px;
+  }
+  
+  </style>
+</head>
+<body>
+  <header>
+  <nav>
+    <ul>
+      <li id="Home">Home</li>
+                <li id="Profile">Profile</li>
+                <li id="Switch">Switch User</li>
+                <li id="About">About</li>
+    </ul>
+  </nav>
+<div class="container">
+  
+  <h1 id="log">BEAT BLEND♪𝄞♫♬🎶</h1>
+  
+</div>
+</header>
+  <h2>RECENT HITS</h2>
+  <main action="/likes" method="post">
+    <section>
+      
+            <div class="row">
+                <div class="log">
+                    <img src="ani1.png" width="350px" height="250">
+                    <br>
+                    <audio controls>
+                        <source src="naa.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="like-button" onclick="likeSong('naaready', ' anirudh')">Like</button>
+                </div>
+                <div class="log">
+                    <img src="ani2.png" width="350px" height="250">
+                    <br>
+                    <audio controls>
+                        <source src="pathala.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="like-button" onclick="likeSong('pathala', 'Anirudh')">Like</button>
+                </div>
+                <div class="log">
+                    <img src="ani3.png" width="350px" height="250">
+                    <br>
+                    <audio controls>
+                        <source src="od.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="like-button" onclick="likeSong('ordinaryperson', 'Anirudh')">Like</button>
+                </div>
+                <div class="log">
+                    <img src="ani4.png" width="350px" height="250">
+                    <br>
+                    <audio controls>
+                        <source src="badass.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="like-button" onclick="likeSong('badass', 'Anirudh')">Like</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="log">
+                    <img src="ani5.png" width="350px" height="250">
+                    <br>
+                    <audio controls>
+                        <source src="hukum.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="like-button" onclick="likeSong('hukum', 'Anirudh')">Like</button>
+                </div>
+                <div class="log">
+                    <img src="ani6.png" width="350px" height="250">
+                    <br>
+                    <audio controls>
+                        <source src="chola.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="like-button" onclick="likeSong('cholachola', 'Anirudh')">Like</button>
+                </div>
+                <div class="log">
+                    <img src="ani7.png" width="350px" height="250">
+                    <br>
+                    <audio controls>
+                        <source src="dippam.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="like-button" onclick="likeSong('dipppamdippam', 'Anirudh')">Like</button>
+                </div>
+                <div class="log">
+                    <img src="ani8.png" width="350px" height="250">
+                    <br>
+                    <audio controls>
+                        <source src="mark.mp3" type="audio/mpeg">
+                    </audio>
+                    <button class="like-button" onclick="likeSong('worldofmark', 'Anirudh')">Like</button>
+                </div>
+            </div>
+            <div class="row">
+              <div class="log">
+                  <img src="ani9.png" width="350px" height="250">
+                  <br>
+                  <audio controls>
+                      <source src="ahee.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="like-button" onclick="likeSong('ahdeera', 'Anirudh')">Like</button>
+              </div>
+              <div class="log">
+                  <img src="ani10.png" width="350px" height="250">
+                  <br>
+                  <audio controls>
+                      <source src="naanun.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="like-button" onclick="likeSong('naanun', 'Anirudh')">Like</button>
+              </div>
+              <div class="log">
+                  <img src="ani11.png" width="350px" height="250">
+                  <br>
+                  <audio controls>
+                      <source src="manam.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="like-button" onclick="likeSong('orumanam', 'Anirudh')">Like</button>
+              </div>
+              <div class="log">
+                  <img src="ani12.png" width="350px" height="250">
+                  <br>
+                  <audio controls>
+                      <source src="nira.mp3" type="audio/mpeg">
+                  </audio>
+                  <button class="like-button" onclick="likeSong('nira', 'Anirudh')">Like</button>
+              </div>
+          </div>
+          <div class="row">
+            <div class="log">
+                <img src="ani13.png" width="350px" height="250">
+                <br>
+                <audio controls>
+                    <source src="kadhai.mp3" type="audio/mpeg">
+                </audio>
+                <button class="like-button" onclick="likeSong('kadhaipoma', 'Anirudh')">Like</button>
+            </div>
+            <div class="log">
+                <img src="ani14.png" width="350px" height="250">
+                <br>
+                <audio controls>
+                    <source src="thala.mp3" type="audio/mpeg">
+                </audio>
+                <button class="like-button" onclick="likeSong('thalakodhum', 'Anirudh')">Like</button>
+            </div>
+            <div class="log">
+                <img src="ani15.png" width="350px" height="250">
+                <br>
+                <audio controls>
+                    <source src="vilam.mp3" type="audio/mpeg">
+                </audio>
+                <button class="like-button" onclick="likeSong('viambaraidaiveli', 'Anirudh')">Like</button>
+            </div>
+            <div class="log">
+                <img src="ani16.png" width="350px" height="250">
+                <br>
+                <audio controls>
+                    <source src="yaar.mp3" type="audio/mpeg">
+                </audio>
+                 <button class="like-button" onclick="likeSong('yaar azhaipathu', 'Anirudh')">Like</button>
+            </div>
+        </div>
+        </section>
+    </main>
+
+
+  <footer>
+    <p>&copy; 2023BEAT BLEND. All rights reserved.</p>
+  </footer>
+  <script>
+    function likeSong(songTitle, artist) {
+      fetch('/likes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ songTitle, artist }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data.message);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App Intro</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script>
+  $(document).ready(function () {
+  $("#int").click(function (e) {
+    window.open("pg2.html", "_self");
+  });
+});
+
+</script>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.intro-text {
+    font-size: 2rem;
+}
+
+h2 {
+    margin: 0;
+}
+
+.music-icon {
+    font-size: 4rem;
+    animation: bounce 2s ease infinite;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+    </style>
+</head>
+<body id="int">
+    <div class="intro-container">
+        <div class="intro-text">
+            <h1>Welcome to</h1>
+            <h2>Your Music App</h2>
+        </div>
+        <div class="music-icon">
+            🎵
+        </div>
+    </div>
+</body>
+</html>

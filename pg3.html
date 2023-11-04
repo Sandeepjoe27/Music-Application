@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Application - Profile</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script>
+  $(document).ready(function () {
+  $("#Home").click(function (e) {
+    window.open("pg2.html", "_self");
+  });
+  
+  $("#Profile").click(function (e) {
+    window.open("pg3.html", "_self");
+  });
+  
+  $("#Switch").click(function (e) {
+    window.open("http://localhost:3000/", "_self");
+  });
+  
+  $("#About").click(function (e) {
+    window.open("pg4.html", "_self");
+  });
+  });
+  
+  </script>
+    <style>
+    
+body {
+
+font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(45deg, #626262, #000000, #7d7e7d, #000000);
+background-size: 400% 400%;
+animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+ 
+  header {
+    color:#ffffff;
+    width: 100%;
+            text-align: center;
+            padding: 50px 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+  
+  header img {
+    max-width: 100px;
+    vertical-align: middle;
+  }
+  
+  header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  header h4 {
+    background-color: #04ad18;
+    color: #000000;
+    padding: 10px;
+    
+  }  
+  nav {
+    background-color: #000000;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+.profile-card {
+    text-align: center;
+}
+
+.profile-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    margin: 10px 0;
+}
+
+.profile-details {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.profile-details p {
+    margin: 5px 0;
+}
+
+.profile-actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-actions button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profile-actions button:hover {
+    background-color: #555;
+}
+footer {
+    
+    color: #ccff00;
+    text-align: center;
+    padding: 50px;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <body>
+            <header>
+                <nav>
+                   
+                    <ul>
+                        <li id="Home">Home</li>
+                        <li id="Profile">Profile</li>
+                        <li id="Switch">Switch User</li>
+                        <li id="About">About</li>
+                    </ul>
+                </nav>
+                <div class="container">
+                    
+                    <h1 id="log">BEAT BLEND♪𝄞♫♬🎶</h1>
+                    
+                  </div>
+                  </header>
+            </header>
+        
+    </header>
+    <h1>Your Profile</h1>
+    <main>
+        <div class="profile-card">
+            <img src="music2.png" alt="Profile Picture">
+            <h2>SandeepJoe</h2>
+            <p>Music Enthusiast</p>
+            <div class="profile-details">
+                <p>Email: SandeepJoe@gmail.com</p>
+                <p>Location: INDIA</p>
+                <p>Favorite Genres: Pop, Rock</p>
+            </div>
+        </div>
+        <div class="profile-actions">
+            <button>Edit Profile</button>
+            <button>Change Password</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Music App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
